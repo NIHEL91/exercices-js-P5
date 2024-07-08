@@ -1,9 +1,11 @@
 //Votre code ici
 function add(a, b) {
-    if (isNaN(a) || !isFinite(a) || isNaN(b) || !isFinite(b)) {
+    const numA = parseFloat(a);  // Convertir l'entrée 'a' en nombre
+    const numB = parseFloat(b);  // Convertir l'entrée 'b' en nombre
+    if (isNaN(numA) || !isFinite(numA) || isNaN(numB) || !isFinite(numB)) {
         throw new Error('Arguments invalides.');
     }
-    return a + b;
+    return numA + numB;
 }
 
  export default add;
